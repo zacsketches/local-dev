@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{block "title" .}}Dashboard{{end}}</title>
+    <link rel="stylesheet" href="/styles/output.css">
+</head>
+<body class="bg-gray-100">
+    {{template "header" .}}
+    
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 bg-white shadow-lg">
+            {{template "nav" .}}
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            {{block "content" .}}{{end}}
+        </main>
+    </div>
+    
+    {{template "footer" .}}
+    
+    <script src="/js/utils.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>
