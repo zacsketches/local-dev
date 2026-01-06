@@ -1,0 +1,13 @@
+{
+  "name": "staticgen-test",
+  "version": "1.0.0",
+  "description": "Test environment for staticgen",
+  "scripts": {
+    "dev": "./local-dev.sh",
+    "build": "staticgen -src src -out site && npx tailwindcss -i ./src/input.css -o ./site/styles/output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "browser-sync": "^3.0.0"
+  }
+}
