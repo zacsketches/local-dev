@@ -1,0 +1,43 @@
+{{define "title"}}Home - Test Site{{end}}
+
+{{define "content"}}
+<div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-gray-800 mb-6">Welcome to the Test Site</h2>
+    
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+        <h3 class="font-semibold text-blue-800 mb-2">staticgen Test Environment</h3>
+        <p class="text-blue-700">
+            This page uses the <strong>public</strong> layout (default). It includes shared header and footer components.
+        </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3">Public Pages</h3>
+            <ul class="space-y-2">
+                <li><a href="/" class="text-blue-600 hover:underline">Home</a></li>
+                <li><a href="/privacy.html" class="text-blue-600 hover:underline">Privacy Policy</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-3">Protected Pages</h3>
+            <ul class="space-y-2">
+                <li><a href="/protected/voyages.html" class="text-blue-600 hover:underline">Voyages Dashboard</a></li>
+                <li><a href="/protected/guests.html" class="text-blue-600 hover:underline">Guests Dashboard</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="mt-8 p-6 bg-green-50 rounded-lg">
+        <h3 class="text-xl font-semibold text-green-800 mb-3">Test Features</h3>
+        <ul class="list-disc list-inside text-green-700 space-y-2">
+            <li>Template variables: Year = {{.Year}}</li>
+            <li>Build timestamp: {{.BuildTimestamp}}</li>
+            <li>Shared components (header, footer)</li>
+            <li>Multiple layouts (public, dashboard)</li>
+            <li>Nested directories (protected/*)</li>
+        </ul>
+    </div>
+</div>
+{{end}}
