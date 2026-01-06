@@ -1,3 +1,4 @@
+{{define "nav"}}
 <nav class="dashboard-sidebar">
   <div class="nav-header">
     <h2>Dashboard</h2>
@@ -5,16 +6,17 @@
   
   <ul class="nav-menu">
     <li class="nav-item">
-      <a href="/voyages" class="nav-link">
+      <a href="/protected/voyages.html" class="nav-link">
         <span class="nav-icon">🚢</span>
         <span class="nav-text">Voyages</span>
       </a>
     </li>
     <li class="nav-item">
-      <a href="/guests" class="nav-link">
+      <a href="/protected/guests.html" class="nav-link">
         <span class="nav-icon">👥</span>
         <span class="nav-text">Guests</span>
       </a>
     </li>
   </ul>
 </nav>
+{{end}}

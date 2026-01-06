@@ -1,0 +1,25 @@
+# Node dependencies
+node_modules/
+test/node_modules/
+
+# Build outputs
+site/
+test/site/
+# Keep committed JS helpers
+!site/js/
+!site/js/**
+!test/site/js/
+!test/site/js/**
+
+# Logs and cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/_logs/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
