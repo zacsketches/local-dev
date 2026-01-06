@@ -1,0 +1,41 @@
+{{define "layout_name"}}dashboard{{end}}
+
+{{define "title"}}Voyages Dashboard{{end}}
+
+{{define "content"}}
+<div class="bg-white shadow-lg rounded-lg p-6">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Voyages Dashboard</h2>
+    
+    <p class="text-gray-600 mb-6">
+        This page uses the <strong>dashboard</strong> layout which includes a sidebar navigation.
+    </p>
+    
+    <div class="bg-purple-50 border-l-4 border-purple-500 p-4 mb-6">
+        <h3 class="font-semibold text-purple-800 mb-2">Layout Switching Test</h3>
+        <p class="text-purple-700">
+            Notice the sidebar navigation on the left. This is defined by <code>{{`{{define "layout_name"}}dashboard{{end}}`}}</code>
+        </p>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3">Active Voyages</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+            <h4 class="font-semibold text-lg mb-2">🚢 Caribbean Adventure</h4>
+            <p class="text-sm text-gray-600 mb-2">Duration: 7 days</p>
+            <span class="inline-block px-2 py-1 text-xs rounded bg-green-100 text-green-800">Active</span>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+            <h4 class="font-semibold text-lg mb-2">🌊 Mediterranean Cruise</h4>
+            <p class="text-sm text-gray-600 mb-2">Duration: 10 days</p>
+            <span class="inline-block px-2 py-1 text-xs rounded bg-blue-100 text-blue-800">Planning</span>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+            <h4 class="font-semibold text-lg mb-2">⛵ Pacific Explorer</h4>
+            <p class="text-sm text-gray-600 mb-2">Duration: 14 days</p>
+            <span class="inline-block px-2 py-1 text-xs rounded bg-green-100 text-green-800">Active</span>
+        </div>
+    </div>
+</div>
+{{end}}
